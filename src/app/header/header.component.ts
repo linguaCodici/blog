@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isCollapsed = false;
+  view = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  // onBlur() {
+  //   this.view = false;
+  // }
 }

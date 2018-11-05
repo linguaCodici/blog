@@ -13,3 +13,23 @@
 	padding-left: 2em;
 	padding-right: 2em;
 } 
+
+.dropdown-nav {
+	list-style: none;
+	text-align: center;
+	background: rgba(199, 96, 147, 0.25);
+	padding-inline-start: 0px; 
+}
+
+.dropdown-nav li {
+	border: 1px solid white;
+}
+
+.dropdown-nav li a:hover {
+	background: rgba(248, 112, 180, 0.25);
+}
+
+.dropdown-nav a {
+	color: black;
+	cursor: pointer;
+}

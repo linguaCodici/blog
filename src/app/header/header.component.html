@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="[ '/home' ]">
     <img src="" 
       width="50" 
       height="50" 
@@ -7,16 +7,30 @@
       alt="" 
       id="logo">    
       <span> Victorique </span> </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-    aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarNavAltMarkup" 
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+    aria-label="Toggle navigation"
+    (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
     <span class="navbar-toggler-icon"></span>
   </button>
+  
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav nav-fill w-75">
-      <a class="nav-item nav-link active" href="#">About</a>
-      <a class="nav-item nav-link" href="#">Blogs</a>
-      <a class="nav-item nav-link" href="#">Quiz</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+      <a class="nav-item nav-link" [routerLink]="[ '/content-full', 'about' ]" [routerLinkActive]="['active']">About</a>
+      <a class="nav-item nav-link" [routerLink]="[ '/content-full', 'blogs' ]" [routerLinkActive]="['active']">Blogs</a>
+      <a class="nav-item nav-link" [routerLink]="[ '/content-full', 'users' ]" [routerLinkActive]="['active']">Quiz</a>
+      <a class="nav-item nav-link" [routerLink]="[ '/content-full', 'contact' ]" [routerLinkActive]="['active']">Contact</a>
     </div>
   </div>
 </nav>
+
+<div id="collapseExample" [ngbCollapse]="isCollapsed" class="d-lg-none">
+  <ul class="dropdown-nav">
+    <li><a class="nav-item nav-link" [routerLink]="[ '/content-full', 'about' ]" [routerLinkActive]="['active']">About</a></li>
+    <li><a class="nav-item nav-link" [routerLink]="[ '/content-full', 'blogs' ]" [routerLinkActive]="['active']">Blogs</a></li>
+    <li><a class="nav-item nav-link" [routerLink]="[ '/content-full', 'users' ]" [routerLinkActive]="['active']">Quiz</a></li>
+    <li><a class="nav-item nav-link" [routerLink]="[ '/content-full', 'contact' ]" [routerLinkActive]="['active']">Contact</a></li>
+  </ul>
+</div>

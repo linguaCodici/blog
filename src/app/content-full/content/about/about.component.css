@@ -1,0 +1,11 @@
+.about-page {
+  margin-top: 2em;
+  margin-left: 4em;
+  padding-left: 2em;
+  background: rgba(199, 96, 147, 0.25);
+  border-radius: 0.5em;
+}
+
+.row p {
+  vertical-align: 20%;
+}
